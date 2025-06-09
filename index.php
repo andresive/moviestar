@@ -1,5 +1,5 @@
 <?php 
-include_once "templetes/header.php";
+include ("templates/header.php");
 ?>
 
 

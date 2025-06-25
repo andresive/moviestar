@@ -1,6 +1,8 @@
 <?php 
     require_once "globals.php";
     require_once "db.php";
+
+    $flassMessage = [];
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +15,7 @@
     <link rel="stylesheet" href="<?= $BASE_URL ?>css/style.css">
 <!-- bootstrap link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.css" integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- this version of bootstrap is no latest release for the easyest development of project and best learning -->
 <!-- bootstrap js link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.js" integrity="sha512-KCgUnRzizZDFYoNEYmnqlo0PRE6rQkek9dE/oyIiCExStQ72O7GwIFfmPdkzk4OvZ/sbHKSLVeR4Gl3s7s679g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- jquery link -->
@@ -53,3 +56,11 @@
         </div>
     </nav>
 </header>
+<!-- message system -->
+    <?php  if(!empty($flassMessage["msg"])): ?>
+    <div class="msg-container">
+        <p class="msg <?php $flassMessage["type"] ?>"> <?php $flassMessage["msg"] ?> </p>
+    </div>
+    <?php endif; ?>
+
+    

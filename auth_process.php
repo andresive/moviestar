@@ -15,7 +15,7 @@
 
     // verify a type of form 
 
-    if($type == "register") { // register camp
+    if($type === "register") { // register camp
 
         $name = filter_input(INPUT_POST, "name");
         $lastname = filter_input(INPUT_POST, "lastname");
@@ -25,7 +25,6 @@
 
         // verify of minimun data
         if($name && $lastname && $email && $password) {
-
 
         } else{
 
